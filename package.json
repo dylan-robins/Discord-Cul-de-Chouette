@@ -1,0 +1,11 @@
+{
+  "name": "cul-de-chouette",
+  "version": "0.1",
+  "description": "Pour jouer au cul de chouette",
+  "main": "bot.js",
+  "author": "Dylan Robins",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^2.4.0"
+  }
+}
