@@ -1,6 +1,6 @@
 {
   "name": "cul-de-chouette",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Pour jouer au cul de chouette",
   "main": "bot.js",
   "author": "Dylan Robins",
