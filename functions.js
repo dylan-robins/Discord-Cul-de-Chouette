@@ -10,7 +10,8 @@ var findWithAttr = function(array, attr, value) {
 }
 
 module.exports = function() {
-  //sync scores array in memory to file on disk
+  // Sync scores array in memory to file on disk
+  // Returns 1 on success, 0 on failiure.
   this.syncFile = function(arr){
     fs.writeFile("scores.json", JSON.stringify(arr, null, 2), function(err) {
       if (err) {
@@ -25,7 +26,8 @@ module.exports = function() {
     })
   }
 
-  //Add username and score to array and file
+  // Add username and score to array and file
+  // Returns 1 on success, 0 on file save error, -2 on player existance
   this.addUser = function(arr, userID, score) {
     var playerExists = 0;
     userID = userID.toString();
@@ -108,10 +110,10 @@ module.exports = function() {
 
     //if user exists
     if  (pos >= 0) {
-      if (dice.length == 2 && dice1_2.length == 0) {
+      if (Object.keys(dice).length == 2 && Object.keys(dice1_2).length == 0) {
         dice1_2 = dice;
       }
-      else if (dice.length == 1 && dice3.length == 0) {
+      else if (Object.keys(dice).length == 1 && Object.keys(dice3).length == 0) {
         dice3 = dice;
       }
     }
